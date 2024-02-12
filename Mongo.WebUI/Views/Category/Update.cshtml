@@ -1,0 +1,16 @@
+﻿@using Mongo.WebUI.Entities
+@model Category
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h1>Kategori Güncelle</h1>
+
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <label>Kategori Adı</label>
+    <input type="text" asp-for="Name" class="form-control" />
+
+    <button class="btn btn-dark">Güncelle</button>
+</form>

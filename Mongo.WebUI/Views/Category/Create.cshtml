@@ -1,0 +1,14 @@
+﻿@using Mongo.WebUI.Entities
+@model Category
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Kategori Ekle</h1>
+
+<form method="post">
+    <label>Kategori Adı</label>
+   <input type="text" asp-for="Name" class="form-control" />
+
+   <button class="btn btn-dark">Kaydet</button>
+   </form>
