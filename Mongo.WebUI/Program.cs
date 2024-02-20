@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddScoped(typeof(IRepository<>),typeof(GenericRepository<>));
-var mongoDatabase = new MongoClient("mongodb://localhost:27017").GetDatabase("MongoEFCore");
+var mongoDatabase = new MongoClient(builder.Configuration.GetConnectionString("MongoConnection")).GetDatabase(builder.Configuration.GetSection("DatabaseName").Value);
 
 
 builder.Services.AddDbContext<MongoContext>(opt =>
